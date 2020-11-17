@@ -1,0 +1,26 @@
+.filter-wrapper {
+  display: flex;
+  max-width: 150px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filter-button {
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px;
+  border: 1px black solid;
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+
+  &[data-state = 'ASC'] {
+    background-color: red;
+  }
+
+  &[data-state = 'DESC'] {
+    background-color: GREEN;
+  }
+}

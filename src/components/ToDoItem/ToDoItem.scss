@@ -1,0 +1,81 @@
+.item-body {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  width: calc(100% / 1.3);
+  padding: 10px;
+  border: 1px black solid;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  position: relative;
+
+  &[data-done = 'true'] {
+    .item-title {
+      text-decoration: line-through;
+    }
+
+    .done-button {
+      background-image: url("../../icons/cancel.svg");
+    }
+  }
+}
+
+.item-count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -35px;
+  width: 30px;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.item-title {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  max-width: 70%;
+  word-break: break-word;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.action-button {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.2s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.done-button {
+  background-image: url("../../icons/done.svg");
+}
+
+.delete-button {
+  background-image: url("../../icons/garbage.svg");
+}
+
+.renew-button {
+  background-image: url("../../icons/refresh.svg");
+}
